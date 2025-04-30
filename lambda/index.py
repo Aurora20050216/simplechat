@@ -4,7 +4,7 @@ import urllib.request
 import urllib.parse
 
 # FastAPIのURL（ngrokのURL）
-FASTAPI_URL = os.environ.get("FASTAPI_URL", "https://d4a9-34-10-132-92.ngrok-free.app/generate")
+FASTAPI_URL = os.environ.get("FASTAPI_URL", "https://08f7-34-34-62-25.ngrok-free.app/generate")
 
 # Lambda コンテキストからリージョンを抽出する関数
 def extract_region_from_arn(arn):
