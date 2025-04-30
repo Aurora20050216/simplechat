@@ -1,11 +1,10 @@
 import json
 import os
-import re  # 正規表現モジュールをインポート
-import requests  # FastAPIに接続するためのrequestsライブラリ
-from botocore.exceptions import ClientError
+import urllib.request
+import urllib.parse
 
-# FastAPI URL
-FASTAPI_URL = os.environ.get("FASTAPI_URL", "https://9b2d-35-232-251-151.ngrok-free.app/chat")
+# FastAPIのURL（ngrokのURL）
+FASTAPI_URL = os.environ.get("FASTAPI_URL", "https://9b2d-35-232-251-151.ngrok-free.app/generate")
 
 # Lambda コンテキストからリージョンを抽出する関数
 def extract_region_from_arn(arn):
