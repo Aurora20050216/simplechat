@@ -65,7 +65,7 @@ def lambda_handler(event, context):
         print("FastAPI response:", response_data)
 
         # FastAPI 側が返す response の構造によってここを調整（仮に text というキーに回答が入っていると仮定）
-        assistant_response = response_data.get("text", "（返答がありませんでした）")
+        assistant_response = response_data.get("generated_text", "（返答がありませんでした）")
 
         # 会話履歴にアシスタント応答を追加
         conversation_history = body.get('conversationHistory', [])
